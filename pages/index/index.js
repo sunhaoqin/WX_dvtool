@@ -12,6 +12,23 @@ Page({
       url: '../logs/logs'
     })
   },
+  canvasDrawData: function () {
+    const ctx = wx.createCanvasContext('firstCanvas')
+    var step = 2
+    let arr = this.data.dataArray
+    for (var i=0;i<arr.length;i++){
+      let x = 10+i*step
+      let y = 10+arr[i]
+      if (i==0){
+        ctx.moveTo(x, y)
+      }
+      ctx.lineTo(x, y)
+      console.log("x:"+10+i*step+" y:"+arr[i])
+    }
+    ctx.stroke()
+    ctx.draw()
+    // console.log(canvasDrawData)
+  },
 
   getCalibrationValue:function(){
     return 101300;
@@ -97,6 +114,7 @@ Page({
                                 that.setData({
                                   dataArray:arr
                                 });
+                                canvasDrawData()
                               })
                             }
                           })
