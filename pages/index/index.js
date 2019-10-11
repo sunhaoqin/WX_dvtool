@@ -17,8 +17,8 @@ Page({
     var step = 2
     let arr = this.data.dataArray
     for (var i=0;i<arr.length;i++){
-      let x = 10+i*step
-      let y = 10+arr[i]
+      let x = 10+i*step*0.5
+      let y = 10+arr[i]*0.5
       if (i==0){
         ctx.moveTo(x, y)
       }
