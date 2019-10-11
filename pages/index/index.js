@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    dataArray:[0,78,79,80,81,78,79,80,81,78,79,80,81,79,80,81,169,170,-180,-190,-200,-1200]
+    dataArray:[0,78,79,80,81,78,79,80,81,78,79,80,81,79,80,81]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -129,7 +129,7 @@ Page({
                                 that.setData({
                                   dataArray:arr
                                 });
-                                canvasDrawData()
+                                canvasDrawData();
                               })
                             }
                           })
@@ -148,6 +148,7 @@ Page({
 
   onLoad: function () {
     this.startBLE();
+    this.canvasDrawData();
   },
 
   getUserInfo: function(e) {
