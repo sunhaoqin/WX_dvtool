@@ -129,7 +129,7 @@ Page({
                                 that.setData({
                                   dataArray:arr
                                 });
-                                canvasDrawData();
+                                that.canvasDrawData();
                               })
                             }
                           })
