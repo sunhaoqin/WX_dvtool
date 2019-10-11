@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    dataArray:[78,79,80,-78,76,70,78,79,80,128,76,300,78,79,80,78,76,70,200,800]
+    dataArray:[0,78,79,80,81,78,79,80,81,78,79,80,81,79,80,81,169,170,-180,-190,-200,-1200]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -27,10 +27,13 @@ Page({
       }
     }
     var abs = maxh - minh
+    if(abs<160){
+      abs=160
+    }
     console.log("maxh:"+maxh+" minh:"+minh)
     for (var i=0;i<arr.length;i++){
       let x = 10+i*step
-      let y = 20+arr[i]*160/abs
+      let y = 80+arr[i]*160/abs
       if (i==0){
         ctx.moveTo(x, y)
       }
