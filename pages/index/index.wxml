@@ -1,11 +1,12 @@
 <!--index.wxml-->
-<view style="display:flex;">
-    <view wx:for="{{dataArray}}" style="margin-top:{{item}}px;width:1px;height:1px;background:#ff0000;">
-    </view>
-</view>
 <view>
     <canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
 </view>
 <view>
     <button bindtap="canvasDrawData">点击画图</button>
 </view>
+<view style="display:flex;">
+    <view wx:for="{{dataArray}}" style="margin-top:{{item}}px;width:1px;height:1px;background:#ff0000;">
+    </view>
+</view>
+
