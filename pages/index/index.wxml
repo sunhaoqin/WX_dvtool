@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view style="display:flex;">
+  <view wx:for="{{dataArray}}" style="margin-top:{{item}}px;width:1px;height:1px;background:#ff0000;">
+    
+  </view>
+</view>
