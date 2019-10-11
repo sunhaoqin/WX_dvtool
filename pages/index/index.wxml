@@ -5,6 +5,11 @@
 <!-- <view>
     <button bindtap="canvasDrawData">点击画图</button>
 </view> -->
+<scroll-view class=".scroll-view" scroll-y="true">
+    <view wx:for="{{dataArray}}">
+        {{item}}
+    </view>
+</scroll-view>
 <view style="display:flex;">
     <view wx:for="{{dataArray}}" style="margin-top:{{item}}px;width:1px;height:1px;background:#ff0000;">
     </view>
