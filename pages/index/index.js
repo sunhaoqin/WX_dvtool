@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    dataArray:[78,79,80,78,76,70,78,79,80,78,76,70,78,79,80,78,76,70]
+    dataArray:[78,79,80,-78,76,70,78,79,80,128,76,300,78,79,80,78,76,70,200,800]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -14,11 +14,23 @@ Page({
   },
   canvasDrawData: function () {
     const ctx = wx.createCanvasContext('firstCanvas')
-    var step = 2
+    var maxh = 0
+    var minh = 0
+    var step = 3
     let arr = this.data.dataArray
+    for (var j=0;j<arr.length;j++){
+      if (arr[j]>maxh){
+        maxh = arr[j]
+      }
+      if (arr[j]<minh){
+        minh = arr[j]
+      }
+    }
+    var abs = maxh - minh
+    console.log("maxh:"+maxh+" minh:"+minh)
     for (var i=0;i<arr.length;i++){
-      let x = 10+i*step*0.5
-      let y = 10+arr[i]*0.5
+      let x = 10+i*step
+      let y = 20+arr[i]*160/abs
       if (i==0){
         ctx.moveTo(x, y)
       }
