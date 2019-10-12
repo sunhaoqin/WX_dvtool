@@ -1,12 +1,19 @@
 <!--index.wxml-->
 <view>
-    <canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
+    <canvas style="width: 340px; height: 600px; margin:0 auto; margin-top:50px; border:1px solid black;" canvas-id="firstCanvas"></canvas>
 </view>
+
+<button  bindtap="clicktest" data-test="{{index}}">calibration</button>
+
 <!-- <view>
-    <button bindtap="canvasDrawData">点击画图</button>
-</view> -->
+
+<view class="{{style_name}} bg_red circle"></view> 
+
+</view>
 <view style="display:flex;">
     <view wx:for="{{dataArray}}" style="margin-top:{{item}}px;width:1px;height:1px;background:#ff0000;">
     </view>
 </view>
+
+-->
 
